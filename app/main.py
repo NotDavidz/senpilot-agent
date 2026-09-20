@@ -69,7 +69,6 @@ def main():
                         print(" -> No files downloaded. Skipping.")
                         continue
 
-                    # --- NEW: Extract dynamic metadata ---
                     print(" -> Extracting matter metadata via AI...")
                     metadata = extract_metadata(result.raw_page_text)
 

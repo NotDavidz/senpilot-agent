@@ -7,7 +7,7 @@ def scrape_matter(matter_number: str, doc_type: models.DocumentType, download_di
     downloaded_files = []
 
     with sync_playwright() as p:
-        # headless=True is required for cloud/server deployment
+        # headless=True for cloud/server deployment
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(accept_downloads=True)
         page = context.new_page()

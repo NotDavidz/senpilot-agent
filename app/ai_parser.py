@@ -26,7 +26,6 @@ def extract_intent(email_body: str) -> EmailIntent:
     )
     return completion.choices[0].message.parsed
 
-# --- NEW: Metadata Extractor ---
 def extract_metadata(page_text: str) -> ScrapedMetadata:
     completion = client.beta.chat.completions.parse(
         model="gpt-4o-mini",
